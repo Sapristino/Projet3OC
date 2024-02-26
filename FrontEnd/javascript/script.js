@@ -99,7 +99,7 @@ function LogOut () {
     const Log = document.querySelector(".Log");
 
         if(Log) {
-            Log.textContent = "Logout";
+            Log.textContent = "logout";
 
             Log.removeAttribute("href");
 
