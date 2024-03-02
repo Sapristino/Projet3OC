@@ -49,7 +49,7 @@
 			<input type="text" id="photoTitle" name="photoTitle" required>
 			<label for="photoCategory">Catégorie</label>
 			<select id="photoCategory" name="photoCategory">
-				<option value=""></option>
+				<option value="0"></option>
 				<option value="1">Objets</option>
 				<option value="2">Appartements</option>
 				<option value="3">Hôtels & restaurants</option>
@@ -71,7 +71,7 @@
 					<li><a href="login.html" class="Log">login</a></li>
 					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 				</ul>
-			</div></nav>
+			</nav></div>
 		</div>
 	</header>
 	<main>
@@ -91,12 +91,14 @@
 				<h2>Mes Projets</h2>
 				<button id="modal" class="inactive"><i class="fa-regular fa-pen-to-square fa-lg"></i>modifier</button>
 			</div>
+			<!--barre filtre-->
 			<div id="filtres">
 				<div data-category="0"><button class="filtre-actif">Tous</button></div>
 				<div data-category="1"><button class="filtre-inactif">Objets</button></div>
 				<div data-category="2"><button class="filtre-inactif">Appartements</button></div>
 				<div data-category="3"><button class="filtre-inactif">Hôtels & restaurants</button></div>
 			</div>
+			<!--div gallery-->
 			<div id="gallery"></div>
 		</section>
 		<section id="contact">

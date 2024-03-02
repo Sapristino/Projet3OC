@@ -1,4 +1,9 @@
-//////////// Intégration des travaux via fetch ////////////////
+//!
+//?
+//TODO
+//
+
+// Intégration des travaux via fetch //
 
 const gallery = document.getElementById("gallery")
 
@@ -30,7 +35,7 @@ const getWorks = async () => {
 };
 
 getWorks()
-//////////// Création d'un filtre dynamique selon code catégorie récupéré ////////////////
+// Création d'un filtre dynamique selon code catégorie récupéré //
 let filtres = document.querySelectorAll("#filtres div");
 
 // Identification de la catégorie par l'ID
@@ -39,7 +44,6 @@ for(let filtre of filtres){
         let tag = this.getAttribute("data-category");
 
         let figures = document.querySelectorAll("#gallery .photo-conteneur");
-        console.log(figures);
 
         for(let figure of figures){
             figure.classList.replace("active", "inactive");
@@ -69,10 +73,10 @@ const boutonsFiltres = document.querySelectorAll('#filtres button');
     });
 
 
-//////////// Changements quand user connecté ////////////////
+// Changements quand user connecté //
 const token = localStorage.getItem('token');
 
-//// Masquer la div Filtre ////
+// Masquer la div Filtre //
 function MasquerFiltres() {
     if (token) {
         const divFiltres = document.querySelector('#filtres');
@@ -92,7 +96,7 @@ function MasquerFiltres() {
     }
 MasquerFiltres();
 
-//// Changement sur le nav "Login / Logout" ////
+// Changement sur le nav "Login / Logout" //
 function LogOut () {
 
     if (token) {
@@ -113,7 +117,7 @@ function LogOut () {
 }
 LogOut ();
 
-//// Appel des modales ////
+// Appel des modales //
 // Appel API works pour modale //
 
 const modalGallery = document.getElementById("modal-gallery");
@@ -241,7 +245,7 @@ fermetureModalAjout.addEventListener("click", function() {
     overlay.classList.replace("active", "inactive")
 })
 
-//// Ajout photo dans l'API ////
+// Ajout photo dans l'API //
 
 
 const photoInput = document.getElementById("photoInput");
