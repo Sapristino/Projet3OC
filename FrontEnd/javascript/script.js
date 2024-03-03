@@ -299,10 +299,11 @@ valider.addEventListener("click", async function(event) {
         alert("Veuillez entrer un titre pour la photo");
         return;
     }
-    if (photoCategory.value.trim() === "") {
-        alert ("Veuillez sélectionner une catégorie pour la photo");
+    if (photoCategory.value.trim() === "" || photoCategory.value.trim() === "0") {
+        alert("Veuillez sélectionner une catégorie pour la photo");
         return;
     }
+    
 
     const formData = new FormData();
     formData.append("image", photoInput.files[0]);
